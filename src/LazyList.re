@@ -37,11 +37,21 @@ let rec take = (n, xs) => switch n {
   | n => Cons(head(xs), () => take(n - 1, tail(xs)))
 };
 
+let rec take_while = (p, xs) => switch (xs) {
+  | Nil => Nil
+  | Cons(x, xs') => if (p(x)) {Cons(x, () => take_while(p, xs'()))} else {Nil}
+};
+
 let rec drop = (n, xs) => switch n {
   | 0 => xs
   | n => drop(n - 1, tail(xs))
 };
 
+// NOT lazy
+let rec drop_while = (p, xs) => switch (xs) {
+  | Nil => Nil
+  | Cons(x, xs') => if (p(x)) {drop_while(p, xs'())} else {Cons(x, xs')}
+};
 // NOT lazy
 let rec foldl = (f, acc	, xs) => switch xs {
   | Nil => acc	
