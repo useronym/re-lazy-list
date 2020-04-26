@@ -1,17 +1,22 @@
 {
-  "name": "my-first-app",
+  "name": "re-lazy-list",
   "version": "0.1.0",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
-    "clean": "bsb -clean-world"
+    "clean": "bsb -clean-world",
+    "test": "npm run build && jest --coverage"
   },
   "keywords": [
-    "BuckleScript"
+    "BuckleScript",
+    "reason",
+    "lazy",
+    "list"
   ],
-  "author": "",
+  "author": "Adam Krupicka",
   "license": "MIT",
   "devDependencies": {
+    "@glennsl/bs-jest": "^0.5.1",
     "bs-platform": "^7.3.1"
   }
 }

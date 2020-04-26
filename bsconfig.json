@@ -1,18 +1,22 @@
 {
-  "name": "my-first-app",
-  "version": "0.1.0",
-  "sources": {
+  "name": "re-lazy-list",
+  "version": "1.0.0",
+  "sources": [
+    {
     "dir" : "src",
     "subdirs" : true
-  },
+    },
+    {
+      "dir": "__tests__",
+      "type": "dev"
+    }
+  ],
   "package-specs": {
     "module": "commonjs",
     "in-source": true
   },
   "suffix": ".bs.js",
-  "bs-dependencies": [
-
-  ],
+  "bs-dependencies": ["@glennsl/bs-jest"],
   "warnings": {
     "error" : "+101"
   },
