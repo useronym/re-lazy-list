@@ -16,7 +16,7 @@
   "author": "Adam Krupicka",
   "license": "MIT",
   "devDependencies": {
-    "@glennsl/bs-jest": "^0.5.1",
+    "@glennsl/bs-jest": "^0.7.0",
     "bs-platform": "^7.3.1"
   }
 }
